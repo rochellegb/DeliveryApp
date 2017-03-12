@@ -14,14 +14,5 @@ namespace BastianRochelle.Model
             this.Name = name;
             this.Price = price;
         }
-
-        public string[] GetDrinksDetails()
-        {
-            string[] drinkDetails = new string[3];
-            drinkDetails[0] = this.ID.ToString();
-            drinkDetails[1] = this.Name.ToString();
-            drinkDetails[2] = this.Price.ToString();
-            return drinkDetails;
-        }
     }
 }

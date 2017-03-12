@@ -31,13 +31,18 @@ namespace BastianRochelle.Delivery
             listViewCartItems.View = View.Details;
         }
 
-        private void btnCheckOut_Click(object sender, EventArgs e)
+        private void btnSubmit_Click(object sender, EventArgs e)
         {
             try
             {
                 var cashTendered = Convert.ToDouble(txtCashTendered.Text);
                 customer = new Customer(txtFirstName.Text, txtLastName.Text, txtContactNo.Text, txtAddress.Text, cashTendered);
-                if (cashTendered < this.cart.TotalAmount)
+
+                if (cashTendered > this.cart.TotalAmount)
+                {
+                    MessageBox.Show("Transaction completed", "", MessageBoxButtons.OK);
+                }
+                else
                 {
                     throw new Exception();
                 }
@@ -69,42 +74,44 @@ namespace BastianRochelle.Delivery
         {
             var selectedFood = (Food)listboxFood.SelectedItem;
             var selectedSubFood = (Food)listboxSubFood.SelectedItem;
+
             try
             {
                 selectedSubFood.Quantity = Convert.ToInt32(this.txtQuantity.Text);
-            }
-            catch (Exception)
-            {
-                txtQuantity.Text = "1";
-            }
 
-            if (selectedSubFood.Quantity > 0)
-            {
-                if (!this.cart.Contains(selectedSubFood))
+
+                if (selectedSubFood.Quantity > 0)
                 {
-                    this.cart.Add(selectedSubFood);
+                    if (!this.cart.Contains(selectedSubFood))
+                    {
+                        this.cart.Add(selectedSubFood);
 
-                    //- Change UI state
-                    string[] item = {
-                        selectedSubFood.ID.ToString(),
-                        selectedSubFood.Name + " (" + selectedFood.Name + ")",
-                        selectedSubFood.Price.ToString(),
-                        selectedSubFood.Quantity.ToString()
-                    };
-                    var listviewItem = new ListViewItem(item);
-                    listViewCartItems.Items.Add(listviewItem);
-                    lblCount.Text = cart.Count().ToString();
-                    lblTotalAmount.Text = this.cart.TotalAmount.ToString();
+                        //- Change UI state
+                        string[] item = {
+                            selectedSubFood.ID.ToString(),
+                            selectedSubFood.Name + " (" + selectedFood.Name + ")",
+                            selectedSubFood.Price.ToString(),
+                            selectedSubFood.Quantity.ToString()
+                        };
+                        var listviewItem = new ListViewItem(item);
+                        listViewCartItems.Items.Add(listviewItem);
+                        lblCount.Text = cart.Count().ToString();
+                        lblTotalAmount.Text = this.cart.TotalAmount.ToString();
+                    }
+                    else
+                    {
+                        MessageBox.Show("You can't duplicate order", "", MessageBoxButtons.OK);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("You can't duplicate order", "", MessageBoxButtons.OK);
+                    MessageBox.Show("Invalid quantity", "", MessageBoxButtons.OK);
                 }
             }
-            else
+            catch (Exception)
             {
                 MessageBox.Show("Invalid quantity", "", MessageBoxButtons.OK);
-                txtQuantity.BackColor = Color.Red;
+                txtQuantity.Text = "1";
             }
         }
 
@@ -129,12 +136,8 @@ namespace BastianRochelle.Delivery
                     listViewCartItems.Items.Remove(li);
                 }
                 lblTotalAmount.Text = this.cart.TotalAmount.ToString();
+                lblCount.Text = cart.Count().ToString();
             }
-        }
-
-        private void txtBox_TextChanged(object sender, EventArgs e)
-        {
-            ((TextBox)sender).BackColor = Color.Moccasin;
         }
     }
 }

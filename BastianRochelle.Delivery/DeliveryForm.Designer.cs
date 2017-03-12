@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeliveryForm));
             this.tabSteps = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblCount = new System.Windows.Forms.Label();
             this.btnAddtoCart = new System.Windows.Forms.Button();
             this.lblPrice = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
@@ -56,16 +58,18 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.lblCount = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabSteps.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabSteps
@@ -99,6 +103,16 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Order";
             // 
+            // lblCount
+            // 
+            this.lblCount.BackColor = System.Drawing.Color.Moccasin;
+            this.lblCount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCount.Location = new System.Drawing.Point(527, 138);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(28, 23);
+            this.lblCount.TabIndex = 7;
+            this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // btnAddtoCart
             // 
             this.btnAddtoCart.BackColor = System.Drawing.Color.Moccasin;
@@ -128,7 +142,6 @@
             this.txtQuantity.Size = new System.Drawing.Size(36, 20);
             this.txtQuantity.TabIndex = 4;
             this.txtQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txtQuantity.TextChanged += new System.EventHandler(this.txtBox_TextChanged);
             // 
             // label8
             // 
@@ -154,7 +167,7 @@
             // 
             this.listboxSubFood.BackColor = System.Drawing.Color.Moccasin;
             this.listboxSubFood.FormattingEnabled = true;
-            this.listboxSubFood.Location = new System.Drawing.Point(151, 24);
+            this.listboxSubFood.Location = new System.Drawing.Point(154, 24);
             this.listboxSubFood.Name = "listboxSubFood";
             this.listboxSubFood.Size = new System.Drawing.Size(252, 160);
             this.listboxSubFood.TabIndex = 1;
@@ -179,7 +192,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(561, 206);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Review";
+            this.tabPage2.Text = "Cart";
             // 
             // groupBox2
             // 
@@ -262,7 +275,6 @@
             this.txtCashTendered.Name = "txtCashTendered";
             this.txtCashTendered.Size = new System.Drawing.Size(66, 20);
             this.txtCashTendered.TabIndex = 13;
-            this.txtCashTendered.TextChanged += new System.EventHandler(this.txtBox_TextChanged);
             // 
             // btnCheckOut
             // 
@@ -273,16 +285,16 @@
             this.btnCheckOut.TabIndex = 12;
             this.btnCheckOut.Text = "Submit";
             this.btnCheckOut.UseVisualStyleBackColor = false;
-            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
+            this.btnCheckOut.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // label6
             // 
             this.label6.ForeColor = System.Drawing.SystemColors.Control;
-            this.label6.Location = new System.Drawing.Point(231, 93);
+            this.label6.Location = new System.Drawing.Point(228, 94);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(86, 23);
+            this.label6.Size = new System.Drawing.Size(89, 23);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Cash Tendered:";
+            this.label6.Text = "Cash Payment:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtAddress
@@ -362,54 +374,66 @@
             // 
             this.groupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.groupBox1.BackColor = System.Drawing.Color.Maroon;
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Location = new System.Drawing.Point(22, 23);
+            this.groupBox1.Location = new System.Drawing.Point(26, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(569, 71);
+            this.groupBox1.Size = new System.Drawing.Size(444, 68);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(369, 25);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 33);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "4 Submit";
             // 
             // label11
             // 
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.ForeColor = System.Drawing.SystemColors.Control;
-            this.label11.Location = new System.Drawing.Point(438, 29);
+            this.label11.Location = new System.Drawing.Point(249, 25);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(105, 33);
+            this.label11.Size = new System.Drawing.Size(80, 33);
             this.label11.TabIndex = 2;
-            this.label11.Text = "Step 3:  CheckOut";
+            this.label11.Text = "3  Fill-up Form";
             // 
             // label10
             // 
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(229, 29);
+            this.label10.Location = new System.Drawing.Point(125, 25);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(114, 33);
+            this.label10.Size = new System.Drawing.Size(76, 33);
             this.label10.TabIndex = 1;
-            this.label10.Text = "Step 2:  Review Cart";
+            this.label10.Text = "2 Review Cart";
             // 
             // label9
             // 
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(37, 29);
+            this.label9.Location = new System.Drawing.Point(6, 25);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(100, 33);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Step 1: Order Items";
+            this.label9.Text = "1 Order Items";
             // 
-            // lblCount
+            // pictureBox1
             // 
-            this.lblCount.BackColor = System.Drawing.Color.Moccasin;
-            this.lblCount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblCount.Location = new System.Drawing.Point(527, 138);
-            this.lblCount.Name = "lblCount";
-            this.lblCount.Size = new System.Drawing.Size(28, 23);
-            this.lblCount.TabIndex = 7;
-            this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.pictureBox1.BackColor = System.Drawing.Color.Bisque;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(490, 27);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(101, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // DeliveryForm
             // 
@@ -417,6 +441,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Moccasin;
             this.ClientSize = new System.Drawing.Size(616, 358);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabSteps);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -431,6 +456,7 @@
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -469,5 +495,7 @@
         private System.Windows.Forms.Button btnRemoveItem;
         private System.Windows.Forms.ListView listViewCartItems;
         private System.Windows.Forms.Label lblCount;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
