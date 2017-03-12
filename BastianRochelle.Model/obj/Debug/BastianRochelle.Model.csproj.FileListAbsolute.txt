@@ -1,0 +1,5 @@
+c:\users\bastie\documents\visual studio 2015\Projects\BastianRochelle.Delivery\BastianRochelle.Model\obj\Debug\BastianRochelle.Model.csprojResolveAssemblyReference.cache
+c:\users\bastie\documents\visual studio 2015\Projects\BastianRochelle.Delivery\BastianRochelle.Model\bin\Debug\BastianRochelle.Model.dll
+c:\users\bastie\documents\visual studio 2015\Projects\BastianRochelle.Delivery\BastianRochelle.Model\bin\Debug\BastianRochelle.Model.pdb
+c:\users\bastie\documents\visual studio 2015\Projects\BastianRochelle.Delivery\BastianRochelle.Model\obj\Debug\BastianRochelle.Model.dll
+c:\users\bastie\documents\visual studio 2015\Projects\BastianRochelle.Delivery\BastianRochelle.Model\obj\Debug\BastianRochelle.Model.pdb

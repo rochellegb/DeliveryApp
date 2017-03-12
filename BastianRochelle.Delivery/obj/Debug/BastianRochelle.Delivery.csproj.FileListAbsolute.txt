@@ -1,0 +1,14 @@
+c:\users\bastie\documents\visual studio 2015\Projects\BastianRochelle.Delivery\BastianRochelle.Delivery\bin\Debug\BastianRochelle.Delivery.exe.config
+c:\users\bastie\documents\visual studio 2015\Projects\BastianRochelle.Delivery\BastianRochelle.Delivery\bin\Debug\BastianRochelle.Delivery.exe
+c:\users\bastie\documents\visual studio 2015\Projects\BastianRochelle.Delivery\BastianRochelle.Delivery\bin\Debug\BastianRochelle.Delivery.pdb
+c:\users\bastie\documents\visual studio 2015\Projects\BastianRochelle.Delivery\BastianRochelle.Delivery\obj\Debug\BastianRochelle.Delivery.csprojResolveAssemblyReference.cache
+c:\users\bastie\documents\visual studio 2015\Projects\BastianRochelle.Delivery\BastianRochelle.Delivery\obj\Debug\BastianRochelle.Delivery.Properties.Resources.resources
+c:\users\bastie\documents\visual studio 2015\Projects\BastianRochelle.Delivery\BastianRochelle.Delivery\obj\Debug\BastianRochelle.Delivery.csproj.GenerateResource.Cache
+c:\users\bastie\documents\visual studio 2015\Projects\BastianRochelle.Delivery\BastianRochelle.Delivery\obj\Debug\BastianRochelle.Delivery.exe
+c:\users\bastie\documents\visual studio 2015\Projects\BastianRochelle.Delivery\BastianRochelle.Delivery\obj\Debug\BastianRochelle.Delivery.pdb
+c:\users\bastie\documents\visual studio 2015\Projects\BastianRochelle.Delivery\BastianRochelle.Delivery\bin\Debug\BastianRochelle.Model.dll
+c:\users\bastie\documents\visual studio 2015\Projects\BastianRochelle.Delivery\BastianRochelle.Delivery\bin\Debug\BastianRochelle.Model.pdb
+C:\Users\Bastie\documents\visual studio 2015\Projects\BastianRochelle.Delivery\BastianRochelle.Delivery\obj\Debug\BastianRochelle.Delivery.HomePage.resources
+C:\Users\Bastie\Source\Repos\DeliveryApp\BastianRochelle.Delivery\bin\Debug\BastianRochelle.Delivery.exe.config
+C:\Users\Bastie\Source\Repos\DeliveryApp\BastianRochelle.Delivery\obj\Debug\BastianRochelle.Delivery.exe
+C:\Users\Bastie\Source\Repos\DeliveryApp\BastianRochelle.Delivery\obj\Debug\BastianRochelle.Delivery.pdb
