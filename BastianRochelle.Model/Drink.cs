@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BastianRochelle.Model
 {
-    public class Drinks : Food
+    public class Drink : Food
     {
-        public Drinks(int id, string name, double price)
+        public Drink(int id, string name, double price)
         {
             this.ID = id;
             this.Name = name;

@@ -29,15 +29,15 @@ namespace BastianRochelle.Delivery
             this.foodList.Add(chicken);
 
             var fries = new Fries(10, "Fries", 0);
-            fries.AddFood(new Fries(11, "Regular", 30))
-                .AddFood(new Fries(12, "Medium", 45))
-                .AddFood(new Fries(13, "Large", 50));
+            fries.AddFood(new Fries(11, "Cheese", 30))
+                .AddFood(new Fries(12, "Barbeque", 45))
+                .AddFood(new Fries(13, "Sour 'n Cream", 50));
             this.foodList.Add(fries);
 
-            var drinks = new Drinks(14, "Drinks", 0);
-            drinks.AddFood(new Drinks(15, "Softdrinks", 15))
-                .AddFood(new Drinks(16, "Juice", 20))
-                .AddFood(new Fries(17, "Smoothie", 25));
+            var drinks = new Drink(14, "Drink", 0);
+            drinks.AddFood(new Drink(15, "Softdrinks", 15))
+                .AddFood(new Drink(16, "Juice", 20))
+                .AddFood(new Drink(17, "Smoothie", 25));
             this.foodList.Add(drinks);
         }
 

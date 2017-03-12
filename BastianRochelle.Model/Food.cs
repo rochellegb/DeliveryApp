@@ -19,6 +19,7 @@ namespace BastianRochelle.Model
         public Food()
         {
             this.subFoods = new List<Food>();
+            this.Quantity = 1;
         }
 
         public Food AddFood(Food food)

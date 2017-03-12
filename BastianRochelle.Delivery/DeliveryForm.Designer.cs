@@ -59,6 +59,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.lblCount = new System.Windows.Forms.Label();
             this.tabSteps.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -83,6 +84,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.Maroon;
+            this.tabPage1.Controls.Add(this.lblCount);
             this.tabPage1.Controls.Add(this.btnAddtoCart);
             this.tabPage1.Controls.Add(this.lblPrice);
             this.tabPage1.Controls.Add(this.txtQuantity);
@@ -102,7 +104,7 @@
             this.btnAddtoCart.BackColor = System.Drawing.Color.Moccasin;
             this.btnAddtoCart.Location = new System.Drawing.Point(412, 126);
             this.btnAddtoCart.Name = "btnAddtoCart";
-            this.btnAddtoCart.Size = new System.Drawing.Size(127, 46);
+            this.btnAddtoCart.Size = new System.Drawing.Size(111, 46);
             this.btnAddtoCart.TabIndex = 6;
             this.btnAddtoCart.Text = "Add to Cart";
             this.btnAddtoCart.UseVisualStyleBackColor = false;
@@ -399,7 +401,17 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Step 1: Order Items";
             // 
-            // FormMainPage
+            // lblCount
+            // 
+            this.lblCount.BackColor = System.Drawing.Color.Moccasin;
+            this.lblCount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCount.Location = new System.Drawing.Point(527, 138);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(28, 23);
+            this.lblCount.TabIndex = 7;
+            this.lblCount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // DeliveryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -408,7 +420,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.tabSteps);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "FormMainPage";
+            this.Name = "DeliveryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Delivery Application";
             this.tabSteps.ResumeLayout(false);
@@ -456,5 +468,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnRemoveItem;
         private System.Windows.Forms.ListView listViewCartItems;
+        private System.Windows.Forms.Label lblCount;
     }
 }

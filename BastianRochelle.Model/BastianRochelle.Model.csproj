@@ -43,7 +43,7 @@
     <Compile Include="Burger.cs" />
     <Compile Include="Chicken.cs" />
     <Compile Include="Customer.cs" />
-    <Compile Include="Drinks.cs" />
+    <Compile Include="Drink.cs" />
     <Compile Include="Food.cs" />
     <Compile Include="Fries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

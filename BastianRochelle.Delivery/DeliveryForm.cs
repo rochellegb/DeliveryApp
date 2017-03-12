@@ -75,7 +75,7 @@ namespace BastianRochelle.Delivery
             }
             catch (Exception)
             {
-                txtQuantity.Text = "0";
+                txtQuantity.Text = "1";
             }
 
             if (selectedSubFood.Quantity > 0)
@@ -93,7 +93,7 @@ namespace BastianRochelle.Delivery
                     };
                     var listviewItem = new ListViewItem(item);
                     listViewCartItems.Items.Add(listviewItem);
-
+                    lblCount.Text = cart.Count().ToString();
                     lblTotalAmount.Text = this.cart.TotalAmount.ToString();
                 }
                 else
